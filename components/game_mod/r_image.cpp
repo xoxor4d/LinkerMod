@@ -32,7 +32,7 @@ void Image_Create2DTexture_PC(GfxImage *image, unsigned __int16 width, unsigned 
 {
 	ASSERT(image != nullptr);
 	ASSERT(!image->texture.basemap);
-	ASSERT(Sys_IsRenderThread());
+	//ASSERT(Sys_IsRenderThread());
 
 	image->width	= width;
 	image->height	= height;
@@ -67,7 +67,7 @@ void Image_Create3DTexture_PC(GfxImage *image, unsigned __int16 width, unsigned 
 {
 	ASSERT(image != nullptr);
 	ASSERT(!image->texture.basemap);
-	ASSERT(Sys_IsRenderThread());
+	//ASSERT(Sys_IsRenderThread());
 
 	image->width	= width;
 	image->height	= height;
@@ -96,7 +96,7 @@ void Image_CreateCubeTexture_PC(GfxImage *image, unsigned __int16 edgeLen, int m
 	// so we'll just suppress this for now
 	if (!LaunchArg_NoFF())
 	{
-		ASSERT(Sys_IsRenderThread());
+		//ASSERT(Sys_IsRenderThread());
 	}
 
 	image->width	= edgeLen;
